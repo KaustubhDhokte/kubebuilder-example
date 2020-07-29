@@ -1,0 +1,7 @@
+domain: kaus.domain
+repo: kausmodule
+resources:
+- group: kausgroup
+  kind: KausCRD
+  version: v1
+version: "2"

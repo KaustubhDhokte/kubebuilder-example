@@ -1,0 +1,20 @@
+# permissions for end users to view kauscrds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kauscrd-viewer-role
+rules:
+- apiGroups:
+  - kausgroup.kaus.domain
+  resources:
+  - kauscrds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - kausgroup.kaus.domain
+  resources:
+  - kauscrds/status
+  verbs:
+  - get

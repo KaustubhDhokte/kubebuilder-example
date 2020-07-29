@@ -1,0 +1,24 @@
+# permissions for end users to edit kauscrds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kauscrd-editor-role
+rules:
+- apiGroups:
+  - kausgroup.kaus.domain
+  resources:
+  - kauscrds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - kausgroup.kaus.domain
+  resources:
+  - kauscrds/status
+  verbs:
+  - get

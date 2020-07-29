@@ -1,0 +1,7 @@
+apiVersion: kausgroup.kaus.domain/v1
+kind: KausCRD
+metadata:
+  name: kauscrd-sample
+spec:
+  # Add fields here
+  foo: bar
